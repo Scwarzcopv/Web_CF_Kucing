@@ -1,0 +1,552 @@
+body {
+    overflow: auto;
+}
+.textbox {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin-bottom: 0.1rem!important;
+}
+textarea {
+    resize: none;
+}
+.comment .form-control {
+    border-color: #3c7cdc;
+}
+.comment .form-control:focus {
+    border-color: #3c7cdc;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(59, 125, 221, 0.5);
+    /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
+}
+.edit-comment .form-control {
+    border-color: rgb(84, 180, 211);
+}
+.edit-comment .form-control:focus {
+    border-color: rgb(84, 180, 211);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(84, 180, 211, 0.5);
+    /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+}
+
+.miring {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.tippy-box[data-theme~='tomato'] {
+    background-color: #222e3c;
+    color: #f5f7fb;
+}
+
+.tippy-box[data-theme~='tomato'][data-placement^='bottom']>.tippy-arrow::before {
+    border-bottom-color: #222e3c;
+}
+
+.confirmButtonSwall {
+    margin: 0 !important;
+}
+
+.tittleSwall {
+    margin: 0 !important;
+}
+.box {
+    transition: all 0.3s ease-in-out;
+}
+.linkSpanner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.box:hover {
+    transform: scale(1.03);
+    z-index: 2;
+    box-shadow: rgba(59,125,221,255) 0px 3px 8px;
+    background: #3c7cdc!important;
+}
+.box a { text-decoration: none; }
+.box .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #3c7cdc;
+}
+
+.box .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2.0px;
+    bottom: 0;
+    left: 0;
+    background-color: #3c7cdc;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.box:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* IMG MODAL */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    cursor: inherit;
+    display: block;
+}
+.preview {
+    overflow: hidden;
+    width: 350px;
+    height: 350px;
+}
+.fit-image {
+    /* max-height: 75vh; */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.shadow-rapat {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+/* END IMG MODAL */
+.img-thumbnail-custom {
+    /* padding: .25rem; */
+    background-color: #fff;
+    border: 1px solid var(--bs-border-color);
+    border-radius: .375rem;
+    width: 80%;
+    height: auto!important
+}
+.border_radius-card {
+    border-top-right-radius: 2px!important;
+    border-bottom-right-radius: 2px!important;
+    border-top-left-radius: 0.5px !important;
+    border-bottom-left-radius: 0.5px !important;
+}
+
+/* LOADER */
+@-webkit-keyframes placeHolderShimmer {
+    0% {
+        background-position: -468px 0;
+    }
+
+    100% {
+        background-position: 468px 0;
+    }
+}
+
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -468px 0;
+    }
+
+    100% {
+        background-position: 468px 0;
+    }
+}
+
+.content-placeholder {
+    display: inline-block;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: placeHolderShimmer;
+    animation-name: placeHolderShimmer;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    background: #f6f7f8;
+    background: -webkit-gradient(linear, left top, right top, color-stop(8%, #eeeeee), color-stop(18%, #dddddd), color-stop(33%, #eeeeee));
+    background: -webkit-linear-gradient(left, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    -webkit-background-size: 1600px 104px;
+    background-size: 1600px 104px;
+    height: inherit;
+    position: relative;
+    border-radius: 5px;
+}
+
+.post_data {
+    padding: 24px;
+    border: 1px solid #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 24px;
+    box-shadow: 10px 10px 5px #eeeeee;
+}
+
+/*fade effect on carousel*/
+.carousel-fade .carousel-inner .item {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    opacity: 0;
+}
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.carousel-fade .carousel-control {
+    z-index: 2;
+}
+
+/* Animation effects for Magnific */
+/* mainClass: 'mfp-fade', */
+/* overlay at start */
+.mfp-fade.mfp-bg {
+    opacity: 0;
+
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+}
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+}
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+}
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
+}
+/*  */
+
+.img-carrousel {
+    height: 200px;
+    object-fit: cover;
+}
+
+.transition-02 {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.transition-05 {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.modal-body textarea {
+    min-height: 90px !important;
+}
+/*  */
+.cursor-pointer {
+    cursor: pointer;
+}
+.cursor-default {
+    cursor: default;
+}
+
+svg {
+    cursor: pointer;
+    overflow: hidden;
+    /* width: 1.7rem; */
+}
+
+svg #heart {
+    transform-origin: center;
+    animation: animateHeartOut 0.3s linear forwards;
+}
+
+svg #main-circ {
+    transform-origin: 29.5px 29.5px;
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox:checked+label svg #heart {
+    transform: scale(0.2);
+    fill: #E2264D;
+    animation: animateHeart 0.3s linear forwards 0.25s;
+}
+
+.checkbox:checked+label svg #main-circ {
+    transition: all 2s;
+    animation: animateCircle 0.3s linear forwards;
+    opacity: 1;
+}
+
+.checkbox:checked+label svg #grp1 {
+    opacity: 1;
+    transition: 0.1s all 0.3s;
+}
+
+.checkbox:checked+label svg #grp1 #oval1 {
+    transform: scale(0) translate(0, -30px);
+    transform-origin: 0 0 0;
+    transition: 0.5s transform 0.3s;
+}
+
+.checkbox:checked+label svg #grp1 #oval2 {
+    transform: scale(0) translate(10px, -50px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform 0.3s;
+}
+
+.checkbox:checked+label svg #grp2 {
+    opacity: 1;
+    transition: 0.1s all 0.3s;
+}
+
+.checkbox:checked+label svg #grp2 #oval1 {
+    transform: scale(0) translate(30px, -15px);
+    transform-origin: 0 0 0;
+    transition: 0.5s transform 0.3s;
+}
+
+.checkbox:checked+label svg #grp2 #oval2 {
+    transform: scale(0) translate(60px, -15px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform 0.3s;
+}
+
+.checkbox:checked+label svg #grp3 {
+    opacity: 1;
+    transition: 0.1s all 0.3s;
+}
+
+.checkbox:checked+label svg #grp3 #oval1 {
+    transform: scale(0) translate(30px, 0px);
+    transform-origin: 0 0 0;
+    transition: 0.5s transform 0.3s;
+}
+
+.checkbox:checked+label svg #grp3 #oval2 {
+    transform: scale(0) translate(60px, 10px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform 0.3s;
+}
+
+.checkbox:checked+label svg #grp4 {
+    opacity: 1;
+    transition: 0.1s all 0.3s;
+}
+
+.checkbox:checked+label svg #grp4 #oval1 {
+    transform: scale(0) translate(30px, 15px);
+    transform-origin: 0 0 0;
+    transition: 0.5s transform 0.3s;
+}
+
+.checkbox:checked+label svg #grp4 #oval2 {
+    transform: scale(0) translate(40px, 50px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform 0.3s;
+}
+
+.checkbox:checked+label svg #grp5 {
+    opacity: 1;
+    transition: 0.1s all 0.3s;
+}
+
+.checkbox:checked+label svg #grp5 #oval1 {
+    transform: scale(0) translate(-10px, 20px);
+    transform-origin: 0 0 0;
+    transition: 0.5s transform 0.3s;
+}
+
+.checkbox:checked+label svg #grp5 #oval2 {
+    transform: scale(0) translate(-60px, 30px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform 0.3s;
+}
+
+.checkbox:checked+label svg #grp6 {
+    opacity: 1;
+    transition: 0.1s all 0.3s;
+}
+
+.checkbox:checked+label svg #grp6 #oval1 {
+    transform: scale(0) translate(-30px, 0px);
+    transform-origin: 0 0 0;
+    transition: 0.5s transform 0.3s;
+}
+
+.checkbox:checked+label svg #grp6 #oval2 {
+    transform: scale(0) translate(-60px, -5px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform 0.3s;
+}
+
+.checkbox:checked+label svg #grp7 {
+    opacity: 1;
+    transition: 0.1s all 0.3s;
+}
+
+.checkbox:checked+label svg #grp7 #oval1 {
+    transform: scale(0) translate(-30px, -15px);
+    transform-origin: 0 0 0;
+    transition: 0.5s transform 0.3s;
+}
+
+.checkbox:checked+label svg #grp7 #oval2 {
+    transform: scale(0) translate(-55px, -30px);
+    transform-origin: 0 0 0;
+    transition: 1.5s transform 0.3s;
+}
+
+.checkbox:checked+label svg #grp2 {
+    opacity: 1;
+    transition: 0.1s opacity 0.3s;
+}
+
+.checkbox:checked+label svg #grp3 {
+    opacity: 1;
+    transition: 0.1s opacity 0.3s;
+}
+
+.checkbox:checked+label svg #grp4 {
+    opacity: 1;
+    transition: 0.1s opacity 0.3s;
+}
+
+.checkbox:checked+label svg #grp5 {
+    opacity: 1;
+    transition: 0.1s opacity 0.3s;
+}
+
+.checkbox:checked+label svg #grp6 {
+    opacity: 1;
+    transition: 0.1s opacity 0.3s;
+}
+
+.checkbox:checked+label svg #grp7 {
+    opacity: 1;
+    transition: 0.1s opacity 0.3s;
+}
+
+@keyframes animateCircle {
+    40% {
+        transform: scale(10);
+        opacity: 1;
+        fill: #DD4688;
+    }
+
+    55% {
+        transform: scale(11);
+        opacity: 1;
+        fill: #D46ABF;
+    }
+
+    65% {
+        transform: scale(12);
+        opacity: 1;
+        fill: #CC8EF5;
+    }
+
+    75% {
+        transform: scale(13);
+        opacity: 1;
+        fill: transparent;
+        stroke: #CC8EF5;
+        stroke-width: 0.5;
+    }
+
+    85% {
+        transform: scale(17);
+        opacity: 1;
+        fill: transparent;
+        stroke: #CC8EF5;
+        stroke-width: 0.2;
+    }
+
+    95% {
+        transform: scale(18);
+        opacity: 1;
+        fill: transparent;
+        stroke: #CC8EF5;
+        stroke-width: 0.1;
+    }
+
+    100% {
+        transform: scale(19);
+        opacity: 1;
+        fill: transparent;
+        stroke: #CC8EF5;
+        stroke-width: 0;
+    }
+}
+
+@keyframes animateHeart {
+    0% {
+        transform: scale(0.2);
+    }
+
+    40% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes animateHeartOut {
+    0% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
