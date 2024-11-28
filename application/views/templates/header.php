@@ -28,7 +28,7 @@
     <link href="<?= base_url('assets/plugins/font-awesome-pro-5/css/all.min.css'); ?>" rel="stylesheet">
 
     <!-- SweetAlert2 -->
-    <script src="<?= base_url('assets'); ?>/js/sweetalert2.min.js"></script>
+    <!-- <script src="<?= base_url('assets'); ?>/js/sweetalert2.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Toastr -->
@@ -59,9 +59,6 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link href="<?= base_url('assets'); ?>/css/magnific-popup.css" rel="stylesheet">
 
-    <!-- Custom -->
-    <link href="<?= base_url('assets'); ?>/css/custom-all.css" rel="stylesheet">
-
     <!-- Datatable -->
     <!-- <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" /> -->
     <!-- <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css" /> -->
@@ -69,6 +66,18 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.0.2/css/buttons.bootstrap5.css" />
+
+    <!-- Custom -->
+    <link href="<?= base_url('assets'); ?>/css/custom-all.css" rel="stylesheet">
+    <style>
+        .swal2-popup {
+            font-size: 0.9rem !important;
+        }
+
+        .swal2-title {
+            font-size: 0.9rem !important;
+        }
+    </style>
 </head>
 
 <body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">

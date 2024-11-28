@@ -1,3 +1,7 @@
+.swal2-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem !important;
+}
 .divider:after,
 .divider:before {
     content: "";

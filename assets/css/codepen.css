@@ -1,10 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
-.testing {
-	cursor: pointer;
-	transform: translateZ(30px);
-	width: auto;
-	margin: auto;
-}
 
 .card {
 	cursor: pointer;

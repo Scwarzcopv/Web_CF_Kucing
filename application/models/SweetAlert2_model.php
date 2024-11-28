@@ -11,7 +11,7 @@ class SweetAlert2_model extends CI_Model
                 toast: true,
                 position: "top-end",
                 showConfirmButton: false,
-                showCloseButton: true,
+                showCloseButton: false,
                 timer: 3000,
                 timerProgressBar: true,
                 // didOpen: (toast) => {

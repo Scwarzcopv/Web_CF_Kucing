@@ -70,7 +70,7 @@ Tutup elemen dari topbar.php
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <script src="<?= base_url('assets'); ?>/js/app.js"></script>
 <!-- <script src="<?= base_url('assets'); ?>/js/datatables.js"></script> -->
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
 <script src="<?= base_url('assets'); ?>/js/jquery.magnific-popup.js"></script>
 <script src="<?= base_url('assets'); ?>/js/jquery.magnific-popup.min.js"></script>
 <script src="<?= base_url('assets/plugins/slick/slick.min.js'); ?>"></script>

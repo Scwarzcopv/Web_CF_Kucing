@@ -29,8 +29,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 // $ip = file_get_contents('https://api.ipify.org');
 // $config['base_url'] = 'http://' . $ip . '/forum_asn_digital/';
 // Function to get the client IP address
-$host = gethostname();
-$ip = gethostbyname($host);
+// $host = gethostname();
+// $ip = gethostbyname($host);
 // $config['base_url'] = 'http://' . $ip . '/cf_penyakit_kucing/';
 $config['base_url'] = 'http://localhost/cf_penyakit_kucing/';
 // $config['base_url'] = 'https://5d45f742196166.lhr.life/cf_penyakit_kucing/';
